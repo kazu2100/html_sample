@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>items sample</title>
+
+    <style>
+      .items {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .item {
+        width: 200px;
+        cursor: pointer;
+      }
+
+      .item:hover {
+        background-color: rgba(223, 217, 217, 0.2);
+      }
+
+      .item .item-img-wrap {
+        overflow: hidden;
+        /* margin: 0 auto; */
+      }
+
+      .item img {
+        width: 200px;
+        height: 200px;
+        transition: 0.3s all;
+        object-fit: cover;
+      }
+      .item:hover img {
+        transform: scale(1.2,1.2);
+      }
+
+      .item .item-name {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .item .item-price {
+        color: red;
+        font-weight: bold;
+      }
+
+      .item-price-unit {
+        font-weight: normal;
+        font-size: 14px;
+      }
+
+      .tag {
+        background-color: orange;
+        padding: 2px 4px;
+        border-radius: 4px;
+        color: white;
+        font-size: 12px;
+      }
+
+      .pagetop {
+        cursor: pointer;
+        position: fixed;
+        right: 30px;
+        bottom: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        transition: .3s;
+        color: #00A6C4;
+        background: rgb(105, 102, 102);
+      }
+
+      .pagetop:hover {
+        box-shadow: 0 0 10px #00A6C4;
+      }      
+
+      .often {
+        padding: 100px;
+      }
+
+      .title {
+        color: white;
+        background-color: red;
+        border-radius: 10px;
+      }
+
+      .search_container{
+        position: relative;
+        box-sizing: border-box;
+      }
+      .search_container input[type="text"]{
+        border: none;
+        height: 1.8em;
+      }
+      .search_container input[type="text"]:focus {
+        outline: 0;
+      }
+      .search_container{
+        border: 2px solid #3879D9;
+        padding: 3px 5px;
+        border-radius: 20px;
+        height: 2.2em;
+        width: 265px;
+        overflow: hidden;
+      }
+      .search_container input[type="submit"]{
+        cursor: pointer;
+        font-family: FontAwesome;
+        border: none;
+        background: #3879D9;
+        color: #fff;
+        position: absolute;
+        width: 3.5em;
+        height: 3.0em;
+        right:0px;
+        top: -5px;
+        outline : none;
+      }
+      .search_container ::-webkit-input-placeholder {
+        color: #3879D9;
+      }
+
+      .pick_up {
+        border: solid 1px grey;
+      }
+
+    </style>
+
+  </head>
+  <body>
+    
+    <h1>〇〇<span class="title">モール</span></h1>
+    <form action="" method="get" class="search_container">
+      <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+      <input type="text" size="25" placeholder="キーワードを入力">
+      <input type="submit" name="submit" value="&#xf002">
+    </form>
+    <p>注目ワード　：　</p>
+    <p class="pick_up">モンブラン</p>
+    <h1>商品一覧</h1>
+
+    <div class="items">
+      <div class="item">
+        <img src="https://1.bp.blogspot.com/-tVeC6En4e_E/X96mhDTzJNI/AAAAAAABdBo/jlD_jvZvMuk3qUcNjA_XORrA4w3lhPkdQCNcBGAsYHQ/s1048/onepiece01_luffy.png" />
+        <p class="item-name">タイトル</p>
+        <p class="item-price">3000<span class="item-price-unit">円</span></p>
+        <span class="tag">送料無料</span>
+      </div>
+      <div class="item">
+        <div class="item-img-wrap">
+          <img src="https://1.bp.blogspot.com/-JWY6R_ha5Uo/X-FcyyDEQyI/AAAAAAABdFI/lYwX7qMA_9wtH4-rWP-_eJT0AGHH4xERgCNcBGAsYHQ/s2048/onepiece20_santaisyou.png" />
+       </div>
+        <p class="item-name">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+        <p class="item-price">3000<span class="item-price-unit">円</span></p>
+      </div>
+      <div class="item">
+        <img src="https://1.bp.blogspot.com/-tVeC6En4e_E/X96mhDTzJNI/AAAAAAABdBo/jlD_jvZvMuk3qUcNjA_XORrA4w3lhPkdQCNcBGAsYHQ/s1048/onepiece01_luffy.png" />
+        <p class="item-name">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+        <p class="item-price">3000<span class="item-price-unit">円</span></p>
+      </div>
+      <div class="item">
+        <img src="https://1.bp.blogspot.com/-tVeC6En4e_E/X96mhDTzJNI/AAAAAAABdBo/jlD_jvZvMuk3qUcNjA_XORrA4w3lhPkdQCNcBGAsYHQ/s1048/onepiece01_luffy.png" />
+        <p class="item-name">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+        <p class="item-price">3000<span class="item-price-unit">円</span></p>
+      </div>
+      <div class="item">
+        <img src="https://1.bp.blogspot.com/-tVeC6En4e_E/X96mhDTzJNI/AAAAAAABdBo/jlD_jvZvMuk3qUcNjA_XORrA4w3lhPkdQCNcBGAsYHQ/s1048/onepiece01_luffy.png" />
+        <p class="item-name">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+        <p class="item-price">3000<span class="item-price-unit">円</span></p>
+      </div>
+      <div class="item">
+        <img src="https://1.bp.blogspot.com/-tVeC6En4e_E/X96mhDTzJNI/AAAAAAABdBo/jlD_jvZvMuk3qUcNjA_XORrA4w3lhPkdQCNcBGAsYHQ/s1048/onepiece01_luffy.png" />
+        <p class="item-name">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+        <p class="item-price">3000<span class="item-price-unit">円</span></p>
+      </div>
+      <div class="item">
+        <img src="https://1.bp.blogspot.com/-tVeC6En4e_E/X96mhDTzJNI/AAAAAAABdBo/jlD_jvZvMuk3qUcNjA_XORrA4w3lhPkdQCNcBGAsYHQ/s1048/onepiece01_luffy.png" />
+        <p class="item-name">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+        <p class="item-price">3000<span class="item-price-unit">円</span></p>
+      </div>
+      <div class="item">
+        <img src="https://1.bp.blogspot.com/-tVeC6En4e_E/X96mhDTzJNI/AAAAAAABdBo/jlD_jvZvMuk3qUcNjA_XORrA4w3lhPkdQCNcBGAsYHQ/s1048/onepiece01_luffy.png" />
+        <p class="item-name">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+        <p class="item-price">3000<span class="item-price-unit">円</span></p>
+      </div>
+      <div class="item">
+        <img src="https://1.bp.blogspot.com/-tVeC6En4e_E/X96mhDTzJNI/AAAAAAABdBo/jlD_jvZvMuk3qUcNjA_XORrA4w3lhPkdQCNcBGAsYHQ/s1048/onepiece01_luffy.png" />
+        <p class="item-name">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+        <p class="item-price">3000<span class="item-price-unit">円</span></p>
+      </div>
+      <div class="item">
+        <img src="https://1.bp.blogspot.com/-tVeC6En4e_E/X96mhDTzJNI/AAAAAAABdBo/jlD_jvZvMuk3qUcNjA_XORrA4w3lhPkdQCNcBGAsYHQ/s1048/onepiece01_luffy.png" />
+        <p class="item-name">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+        <p class="item-price">3000<span class="item-price-unit">円</span></p>
+      </div>
+      <div class="item">
+        <img src="https://1.bp.blogspot.com/-tVeC6En4e_E/X96mhDTzJNI/AAAAAAABdBo/jlD_jvZvMuk3qUcNjA_XORrA4w3lhPkdQCNcBGAsYHQ/s1048/onepiece01_luffy.png" />
+        <p class="item-name">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+        <p class="item-price">3000<span class="item-price-unit">円</span></p>
+      </div>
+      <div class="item">
+        <img src="https://1.bp.blogspot.com/-tVeC6En4e_E/X96mhDTzJNI/AAAAAAABdBo/jlD_jvZvMuk3qUcNjA_XORrA4w3lhPkdQCNcBGAsYHQ/s1048/onepiece01_luffy.png" />
+        <p class="item-name">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+        <p class="item-price">3000<span class="item-price-unit">円</span></p>
+      </div>
+      <div class="item">
+        <img src="https://1.bp.blogspot.com/-tVeC6En4e_E/X96mhDTzJNI/AAAAAAABdBo/jlD_jvZvMuk3qUcNjA_XORrA4w3lhPkdQCNcBGAsYHQ/s1048/onepiece01_luffy.png" />
+        <p class="item-name">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+        <p class="item-price">3000<span class="item-price-unit">円</span></p>
+      </div>
+      <div class="item">
+        <img src="https://1.bp.blogspot.com/-tVeC6En4e_E/X96mhDTzJNI/AAAAAAABdBo/jlD_jvZvMuk3qUcNjA_XORrA4w3lhPkdQCNcBGAsYHQ/s1048/onepiece01_luffy.png" />
+        <p class="item-name">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+        <p class="item-price">3000<span class="item-price-unit">円</span></p>
+      </div>
+      <div class="item">
+        <img src="https://1.bp.blogspot.com/-tVeC6En4e_E/X96mhDTzJNI/AAAAAAABdBo/jlD_jvZvMuk3qUcNjA_XORrA4w3lhPkdQCNcBGAsYHQ/s1048/onepiece01_luffy.png" />
+        <p class="item-name">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+        <p class="item-price">3000<span class="item-price-unit">円</span></p>
+      </div>
+      <div class="item">
+        <img src="https://1.bp.blogspot.com/-tVeC6En4e_E/X96mhDTzJNI/AAAAAAABdBo/jlD_jvZvMuk3qUcNjA_XORrA4w3lhPkdQCNcBGAsYHQ/s1048/onepiece01_luffy.png" />
+        <p class="item-name">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+        <p class="item-price">3000<span class="item-price-unit">円</span></p>
+      </div>
+      <div class="item">
+        <img src="https://1.bp.blogspot.com/-tVeC6En4e_E/X96mhDTzJNI/AAAAAAABdBo/jlD_jvZvMuk3qUcNjA_XORrA4w3lhPkdQCNcBGAsYHQ/s1048/onepiece01_luffy.png" />
+        <p class="item-name">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+        <p class="item-price">3000<span class="item-price-unit">円</span></p>
+      </div>      <div class="item">
+        <img src="https://1.bp.blogspot.com/-tVeC6En4e_E/X96mhDTzJNI/AAAAAAABdBo/jlD_jvZvMuk3qUcNjA_XORrA4w3lhPkdQCNcBGAsYHQ/s1048/onepiece01_luffy.png" />
+        <p class="item-name">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+        <p class="item-price">3000<span class="item-price-unit">円</span></p>
+      </div>
+      <div class="item">
+        <img src="https://1.bp.blogspot.com/-tVeC6En4e_E/X96mhDTzJNI/AAAAAAABdBo/jlD_jvZvMuk3qUcNjA_XORrA4w3lhPkdQCNcBGAsYHQ/s1048/onepiece01_luffy.png" />
+        <p class="item-name">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+        <p class="item-price">3000<span class="item-price-unit">円</span></p>
+      </div>
+      <div class="item">
+        <img src="https://1.bp.blogspot.com/-tVeC6En4e_E/X96mhDTzJNI/AAAAAAABdBo/jlD_jvZvMuk3qUcNjA_XORrA4w3lhPkdQCNcBGAsYHQ/s1048/onepiece01_luffy.png" />
+        <p class="item-name">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+        <p class="item-price">3000<span class="item-price-unit">円</span></p>
+      </div>      <div class="item">
+        <img src="https://1.bp.blogspot.com/-tVeC6En4e_E/X96mhDTzJNI/AAAAAAABdBo/jlD_jvZvMuk3qUcNjA_XORrA4w3lhPkdQCNcBGAsYHQ/s1048/onepiece01_luffy.png" />
+        <p class="item-name">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+        <p class="item-price">3000<span class="item-price-unit">円</span></p>
+      </div>
+      <div class="item">
+        <img src="https://1.bp.blogspot.com/-tVeC6En4e_E/X96mhDTzJNI/AAAAAAABdBo/jlD_jvZvMuk3qUcNjA_XORrA4w3lhPkdQCNcBGAsYHQ/s1048/onepiece01_luffy.png" />
+        <p class="item-name">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+        <p class="item-price">3000<span class="item-price-unit">円</span></p>
+      </div>
+      <div class="item">
+        <img src="https://1.bp.blogspot.com/-tVeC6En4e_E/X96mhDTzJNI/AAAAAAABdBo/jlD_jvZvMuk3qUcNjA_XORrA4w3lhPkdQCNcBGAsYHQ/s1048/onepiece01_luffy.png" />
+        <p class="item-name">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+        <p class="item-price">3000<span class="item-price-unit">円</span></p>
+      </div>      <div class="item">
+        <img src="https://1.bp.blogspot.com/-tVeC6En4e_E/X96mhDTzJNI/AAAAAAABdBo/jlD_jvZvMuk3qUcNjA_XORrA4w3lhPkdQCNcBGAsYHQ/s1048/onepiece01_luffy.png" />
+        <p class="item-name">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+        <p class="item-price">3000<span class="item-price-unit">円</span></p>
+      </div>
+      <div class="item">
+        <img src="https://1.bp.blogspot.com/-tVeC6En4e_E/X96mhDTzJNI/AAAAAAABdBo/jlD_jvZvMuk3qUcNjA_XORrA4w3lhPkdQCNcBGAsYHQ/s1048/onepiece01_luffy.png" />
+        <p class="item-name">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+        <p class="item-price">3000<span class="item-price-unit">円</span></p>
+      </div>
+      <div class="item">
+        <img src="https://1.bp.blogspot.com/-tVeC6En4e_E/X96mhDTzJNI/AAAAAAABdBo/jlD_jvZvMuk3qUcNjA_XORrA4w3lhPkdQCNcBGAsYHQ/s1048/onepiece01_luffy.png" />
+        <p class="item-name">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+        <p class="item-price">3000<span class="item-price-unit">円</span></p>
+      </div>
+      
+    </div>
+
+    <div class="pagetop">TOP</div>
+    <script src="top-back.js"></script>
+    
+  </body>
+</html>
