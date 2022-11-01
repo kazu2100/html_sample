@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>サンプルフォーム</title>
+    <link rel="stylesheet" href="./form.css">
+    <style>
+      body {
+        background-color: rgb(0, 187, 255);
+      }
+      .box {
+        background-color: white;
+        padding: 50px;
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 10px;
+      }
+      .form-item {
+        display: flex;
+      }
+      .question, .answer {
+        flex: 1;
+      }
+      .answer {
+        padding: 1rem;
+      }
+
+      
+/* solid020 */
+.button_solid020 a {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 240px;
+    padding: 10px 25px 10px 60px;
+    color: #FFF;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    background: #6bb6ff;
+    filter: drop-shadow(0px 2px 4px #ccc);
+    border-radius: 1px;
+}
+.button_solid020 a:before {
+    content: "";
+    width: 30px;
+    height: 90%;
+    position: absolute;
+    background: #FFF;
+    left: 14px;
+    top: -1px;
+    clip-path: polygon(100% 0%, 100% 100%, 50% 75%, 0 100%, 0 0);
+}
+.button_solid020 a:after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f7d9";
+    position: absolute;
+    left: 20px;
+    top: 7%;
+    color: #6bb6ff;
+}
+.button_solid020 a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px -5px rgb(0 0 0 / 15%), 0 0 5px rgb(0 0 0 / 10%);
+}
+
+    </style>
+  </head>
+  <body>
+
+    <div class="box">
+     <h1>ホゲホゲ</h1>
+     <p>フガフガフガフガフガフガフガフガ</p>
+
+     <form>
+      <div class="form-item">
+          <div class="question">
+            <h3>質問１</h3>
+            <p>相手の間違いを指摘できる方だ</p>
+        </div>
+        <div class="answer">
+          <div>
+            <input type="radio" id="huey" name="drone" value="huey">
+            <label for="huey">Huey</label>
+          </div>
+
+          <div>
+            <input type="radio" id="dewey" name="drone" value="dewey">
+            <label for="dewey">Dewey</label>
+          </div>
+    
+        <div>
+            <input type="radio" id="louie" name="drone" value="louie">
+            <label for="louie">Louie</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-item">
+          <div class="question">
+            <h3>質問２</h3>
+            <p>相手の間違いを指摘できる方だ</p>
+        </div>
+       <div class="answer">
+        <input type="checkbox" name="mistake" value="correct">はい<br>
+        <input type="checkbox" name="mistake" value="lcorrect">どちらかというとはい<br>
+        <input type="checkbox" name="mistake" value="soso">どちらともいえない<br>
+        <input type="checkbox" name="mistake" value="lncorrect">どちらかというといいえ<br>
+        <input type="checkbox" name="mistake" value="ncorrect">いいえ<br>
+       </div>   
+      </div>
+      
+      <div class="form-item">
+        <div class="question">
+          <h3>質問３</h3>
+          <p>この中で一番好きな食べ物はどれ？</p>
+        </div>
+        <fieldset class="answer">
+
+          <div>
+            <input type="radio" id="crab" name="q3" value="crab" checked>
+            <label for="crab">カニクリームコロッケ</label>
+          </div>
+
+          <div>
+            <input type="radio" name="q3" value="okono">
+            <label for="okono">お好み焼き</label>
+          </div>
+
+          <div>
+            <input type="radio" name="q3" value="friedchicken">
+            <label for="friedchicken">鶏のから揚げ</label>
+          </div>
+
+        </fieldset>
+      </div>
+
+       <button class="bn632-hover bn26">送信</button>
+
+       <div class="button_solid020">
+        <a href="#">ちょっと待った</a>
+      </div>
+
+     </form>
+
+    </div>
+
+  </body>
+</html>
